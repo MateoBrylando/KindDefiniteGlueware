@@ -1,3 +1,4 @@
+import java.awt.print.Printable;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
@@ -9,11 +10,17 @@ public class Main {
         System.out.print("Wprowadź symbol: ");
         char symbol = trojkat.next().charAt(0);
         for (int i = 0; i < wiersz; i++) {
-            for (int j = 0; j < kolumna; j++) {
-                if (j <= i) {
-                    System.out.print(symbol + " ");
-                }
+            for (int j = wiersz; j >i+1; j--) {
+              
+                    System.out.print(" ");
+                
             }
+          for(int j= 0; j<i+1; j++){
+
+          System.out.print(symbol);
+
+            
+          }
             System.out.println();
         }
         trojkat.close();
